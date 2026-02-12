@@ -1,0 +1,55 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# WordPress core (managed by WP, not git)
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+license.txt
+readme.html
+xmlrpc.php
+
+# WordPress config (contains credentials)
+wp-config.php
+wp-config-sample.php
+wp-salt.php
+
+# Uploads / media (too large for git)
+wp-content/uploads/
+
+# Third-party plugins (managed via WP admin / WP-CLI)
+wp-content/plugins/
+
+# Cache and backups
+wp-content/cache/
+wp-content/upgrade/
+wp-content/upgrade-temp-backup/
+wp-content/wpvivid*/
+wp-content/maintenance/
+wp-content/maintenance.php
+
+# Legacy dump (migration complete)
+josh_plaza/
+myartstarz_db.sql
+*.sql
+
+# SSH keys (should never be in git)
+id_ed25519
+id_ed25519.pub
+*.pem
+
+# Error logs
+error_log
+*.log
+
+# Discovery/planning docs (local only)
+discovery-*.md
+client-discovery-guide.md
+discovery-questionnaire.js
+
+# PHP config
+php.ini
+.user.ini
+.ftpquota

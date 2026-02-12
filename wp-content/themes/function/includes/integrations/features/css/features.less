@@ -1,0 +1,125 @@
+/**
+ * Features
+ *
+ * Styles which integrate this theme with the Features plugin.
+ * This stylesheet is only enqueued if Features is activated.
+ * http://wordpress.org/plugins/features-by-woothemes/
+ */
+
+@import url(../../../../css/mixins.less);
+
+.home {
+	.widget_woothemes_features {
+		padding: 0;
+	}
+}
+
+.widget_woothemes_features  {
+	margin: 0 0 2.244em;
+	.clearfix;
+	h2, h3 {
+		margin: 0 0 1em;
+		font-size: 1.618em;
+		line-height: 1.387em;
+	}
+
+	.feature {
+		width: 100%;
+
+		h3 {
+			color: @color_body;
+			font-weight: normal;
+			font-size: 1.2em;
+			margin: 0 0 .382em;
+			a {
+				color: @color_body;
+			}
+		}
+	}
+	.feature {
+		margin: 0 0 1.618em;
+	}
+	.feature-content {
+		color: lighten(@color_body, 25%);
+	}
+	img {
+		margin: 0 0 1em;
+		height: auto;
+		padding:.53em;
+		border:1px solid darken(@border_main, 8%);
+		.borderbox;
+	}
+}
+
+// Layout
+@media only screen and (min-width: 768px) {
+	#content {
+		.widget_woothemes_features {
+			.columns-2,
+			.columns-3,
+			.columns-4,
+			.columns-5,
+			.columns-6 {
+				.clearfix;
+
+				.feature {
+					float: left;
+					margin-right: 3.8%;
+					&.first {
+						clear: both;
+					}
+					&.last {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.columns-2 {
+				.feature {
+					width: 48%;
+				}
+			}
+
+			.columns-3 {
+				.feature {
+					width: 30.75%;
+				}
+			}
+
+			.columns-4 {
+				.feature {
+					width: 22.05%;
+				}
+			}
+
+			.columns-5 {
+				.feature {
+					width: 16.9%;
+				}
+			}
+
+			.columns-6 {
+				.feature {
+					width: 13.5%;
+				}
+			}
+		}
+	}
+
+	#sidebar {
+		.widget_woothemes_features {
+			.columns-2,
+			.columns-3,
+			.columns-4,
+			.columns-5,
+			.columns-6 {
+				.feature {
+					width: 100%;
+					float: none;
+					margin-right: 0;
+					clear: both;
+				}
+			}
+		}
+	}
+}

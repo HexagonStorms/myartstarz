@@ -1,0 +1,224 @@
+*** Function Changelog ***
+
+2016.03.17 - version 1.4.12
+ * Fix - fixes https mixed mode warning message.
+   includes/theme-js.php
+
+2015.08.25 - version 1.4.11
+ * Fix - Ensures calls to parent::WP_Widget are replaced with parent::__construct.
+   /includes/widgets/
+
+2015.08.24 - version 1.4.10
+ * Fix - Updates the calls to uniform.js on all WooCommerce variation instances, to ensure the selected text updates correctly.
+   /includes/js/general.js
+ * Fix - Updates all widget constructors to use PHP5 constructor styles instead of the PHP4 constructor style.
+   /includes/widgets/
+
+2015.06.04 - version 1.4.9
+ * includes/js/jquery.prettyPhoto.js - Updated prettyPhoto to version 3.1.6.
+
+2015.04.17 - version 1.4.8
+ * Fix - Width causing horizontal scrollbar to appear.
+   includes/js/testimonials.js
+
+2014.11.28 - version 1.4.7
+ * Fix - Fixes issue with removing items from cart on mobile devices.
+   includes/integrations/woocommerce/css/woocommerce.css,
+   style.css
+
+ * Fix - Fixes alignment of posts when using 8 or more featured posts on the homepage.
+   css/layout.css,
+   includes/featured-products.php,
+   style.css
+
+2014.09.24 - version 1.4.6
+ * New - Declares Sensei support
+   includes/theme-functions.php
+
+2014.07.24 - version 1.4.5
+ * Fix - Fixes thumbnail size in search results.
+   content-search.php
+
+2014.06.19 - version 1.4.4
+ * Tweak - Improved Sensei styling
+   style.less
+
+ * Fix - Fixes Testimonials widget overlap on load.
+   includes/integrations/testimonials/css/testimonials.css
+
+2014.05.22 - version 1.4.3
+ * Tweak - Removed Twitter from Contact Page as it not longer works.
+   template-contact.php,
+   includes/theme-options.php
+
+2014.05.05 - version 1.4.2
+ * Fix - Adjusts default WooCommerce column width.
+   style.css,
+   includes/integrations/woocommerce/css/woocommerce.css
+
+2014.04.01 - version 1.4.1
+ * Fix - Added missing header cart image.
+   includes/integrations/woocommerce/css/woocommerce.css
+
+2014.03.25 - version 1.4.0
+ * New - Integration with Our Team plugin
+   includes/integrations/our-team/
+   includes/theme-plugin-integrations.php
+
+ * Tweak - WooCommerce integration uses modern method
+   includes/integrations/woocommerce/
+
+ * Tweak - Testimonials integration uses modern method
+   includes/integrations/testimonials/
+
+ * Tweak - Features integration uses modern method
+   includes/integrations/features/
+
+2014.03.14 - version 1.3.1
+ * Tweak - Remove unnecessary WooCommerce template file
+   archive-product.php
+
+2014.02.03 - version 1.3.0
+ * New - Integration with Projects plugin.
+   functions.php
+   includes/theme-plugin-integrations.php
+   includes/integrations/projects/*
+
+2013.12.27 - version 1.2.1
+ * Tweak - Removes "Slide" specific code.
+   includes/theme-options.php
+
+2013.12.11 - version 1.2.0
+ * New - WooCommerce 2.1 Styling
+   css/woocommerce.css
+   includes/theme-woocommerce.php
+
+2013.10.01 - version 1.1.18
+ * css/layout.css - Fix CSS validation errors.
+ * css/non-responsive.css - Fix CSS validation errors.
+ * header.php - Fix markup valiation errrors.
+ * includes/theme-actions.php - Fix markup validation errors.
+
+2013.09.17 - version 1.1.17
+ * archive-product.php - Moved title inside of the main container.
+
+2013.09.10 - version 1.1.16
+ * includes/theme-functions.php - Fixes Map callout and title catering for apostrophes.
+ * loop-portfolio.php - Removed code reference to a non existent image.
+ * includes/theme-woocommerce.php - Make WooCommerce style disabling 2.1 compatible.
+ * css/woocommerce.css - Removed float from payment box so fields show up in correct order.
+
+2013.07.29 - version 1.1.15
+ * style.css - Fixed Features title font inconsistency.
+
+2013.07.09 - version 1.1.14
+ * includes/theme-actions.php - Fixed issue with button color not being applied to all buttons.
+
+2013.06.25 - version 1.1.13
+ * css/woocommerce.css - Fixed issue where minus button was hidden in Firefox Windows.
+
+2013.06.17 - version 1.1.12
+ * includes/theme-actions.php - Added !important to color attribute to make sure custom typography colors override general link color.
+ * loop-portfolio.php - Fixed Portfolio pagination not working & added option to set custom Portfolio title.
+ * includes/theme-options.php - Added option to set custom Portfolio title.
+ * css/woocommerce.css - Fixed messy labels layout in mobile mode.
+ * css/woocommerce-responsive.css - Fixed messy labels layout in mobile mode.
+ * includes/theme-functions.php - Applied "Non Responsive" layout to IE8.
+
+2013.05.08 - version 1.1.11
+ * includes/theme-js.php - Changed "animationDuration" to "animationSpeed", the property was decrepted in FlexSlider 2.0.
+
+2013.04.30 - version 1.1.10
+ * css/woocommerce.css - Fixes minus button not showing up on IE8.
+ * style.css - Fixed Cart table in iPhone portrait mode.
+ * css/layout.css - Fixed Cart table in iPhone portrait mode.
+
+2013.04.04 - version 1.1.9
+ * css/woocommerce.css - Cleared floats on Checkout screen.
+
+2013.03.27 - version 1.1.8
+ * includes/featured-slider.php - Removed comments label if comments are disabled.
+ * includes/theme-functions.php - Removed comments label from Post Meta if comments are disabled.
+ * includes/theme-actions.php - Theme's lightbox now works properly with WooCommerce.
+ * includes/theme-woocommerce.php - Sidebar is now displaying on product pages.
+
+2013.03.18 - version 1.1.7
+ * css/woocommerce.css - Styled the 'View Cart' link.
+ * css/woocommerce-responsive.css - *Added* Reponsive CSS for Non Responsive browsers (IE8).
+ * css/non-responsive.css - Included WooCommerce responsive CSS.
+
+2013.03.06 - version 1.1.6
+ * css/layout.css
+   css/layout.less - Fixing featured products layout on home page
+ * single-portfolio.php - Enabling gallery lightbox navigation on single portfolio pages
+ * includes/theme-woocommerce.php - Adding WooCommerce support to theme
+
+2013.02.25 - version 1.1.5
+ * includes/theme-woocommerce.php - Update for WooCommerce 2.0 pagination
+ * css/layout.css
+   css/layout.less - Highlighting categories in menu when post from that category is being displayed
+
+2013.01.31 - version 1.1.4
+ * includes/intro-message.php - added stripslashes
+ * css/woocommerce.css - Fixed styling bug on Checkout page.
+ * style.css - Replaced "Istok Web" with "Lato" due to issues with the font and fixed issue with styling of submit buttons on iOS devices, added proper styling for portfolio items and fixes issue where the slide didn't fill the whole slider.
+ * css/layout.css - Fixes issue where the slide didn't fill the whole slider & .
+ * includes/theme-options.php - Replaced "Istok Web" with "Lato" due to issues with the font.
+ * includes/theme-actions.php - Replaced "Istok Web" with "Lato" due to issues with the font.
+ * css/layout.css - Changed the navigation default size to 1.1 from 1.2 due to new font & fixed navigation hightligh bug.
+ * includes/js/respond.js - *REMOVED*
+ * includes/theme-functions.php - Added the following functions: "woo_remove_responsive_design()", "woo_load_responsive_design_removal()" and "woo_remove_responsive_ie8".
+ * css/non-responsive.css - *ADDED* IE8 layout
+ * includes/featured-products.php - Uses get_product() if WooCommerce 2.0 is in use & only featured posts are now displayed.
+ * includes/theme-woocommerce.php
+   includes/theme-functions.php - Uses WooCommerce 2.0 widget name for search widget
+ * css/woocommerce.css - Cart image width & Product loop styling (star rating, view cart link)
+ * styles/*ALL*.css - Alt styles now work properly on IE8
+ * style.css - show first slide when loading page & stying for "Latest Blog Posts"
+ * includes/js/general.js - Removed Uniform.JS from radio boxes.
+
+2013.01.15 - version 1.1.3
+ * includes/js/portfolio.js - fixed portfolio stacking bug with WP 3.5
+
+2013.01.10 - version 1.1.2
+ * css/layout.css - Fixed overflow of posts in the homepage.
+ * search.php - bug in Function's search.php closing div tag should be an h1
+ * includes/blog-posts.php - Localized "Latest Blog Posts" text
+ * style.css - Removed fixed width from Portfolio items.
+ * includes/theme-js.php - Fixed theme options conditionals.
+ * includes/theme-options.php - Products now inherit the overall layout settings of the theme.
+ * loop-portfolio.php - Fixed issue with Portfolio Archives returning an error.
+
+2012.12.18 - version 1.1.1
+ * includes/featured-slider.php - Changed video height to 551px (16:9)
+ * style.css - Fixed Testimonials and price in mobile mode plugin styling and price overlap in mobile mode.
+ * includes/theme-functions.php - Renamed "woo_header_search" to "woo_header_components" and moved mini cart inside.
+ * header.php - removed mini cart (moved to theme-functions.php)
+ * css/woocommerce.css - Fixed overlap of pagination, sort selector and price in mobile mode
+ * includes/theme-woocommerce.php - Fixed header styling problem
+
+2012.12.06 - version 1.1
+ * style.css
+   woocommerce.css - Styling preparation for WooCommerce 2.0
+ * includes/theme-woocommerce.php - disable WooCommerce lightbox when prettyPhoto is enabled
+
+2012.11.29 - version 1.0.3
+ * includes/theme-actions.php - load layout.css in header & fixed duplicated lightbox bug.
+ * style.css - remove layout.less from being included & improved Contact Template styling
+ * css/layout.css - added CSS file and changed media query to "all" & improved Contact Template styling
+ * styles/* - (ALL alt styles) fixed alt styles to work with 1.0.3
+ * includes/widgets/widget-woo-component.php - Removed invalid "Home Shop" item from the list.
+
+
+2012.11.27 - version 1.0.2
+ * includes/theme-widgets.php - added missing Woo Component widget
+ * includes/theme-options.php - added missing $other_entries variable for maps zoom level option,  moved backgroung to style.css and remove it from the options.
+ * style.css - moved background to style.css and removed it from the options. Fixed Contact Page Subscribe & Connect section.
+ * css/woocommerce.css - fixed cart double border issue.
+ * styles/* - (ALL Alt Styles) Fixed issue with images not showing up.
+
+2012.11.23 - version 1.0.1
+ * includes/theme-actions.php - Fix invalid function name when child theme active
+
+2012.11.22 - version 1.0
+ * First release!
