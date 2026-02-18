@@ -284,11 +284,6 @@ Text Domain: myartstarz-fse
 	color: var(--wp--preset--color--accent-1);
 }
 
-/* Hide WooCommerce mini-cart from header (takes layout space even when invisible) */
-.mas-header-row .wp-block-woocommerce-mini-cart {
-	display: none !important;
-}
-
 /* Hide "My Account" text link in desktop nav (it shows in mobile hamburger) */
 @media (min-width: 769px) {
 	.wp-block-navigation-item:has(a[href*="my-account"]) {

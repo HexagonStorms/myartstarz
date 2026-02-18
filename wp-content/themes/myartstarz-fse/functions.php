@@ -50,6 +50,16 @@ add_action( 'init', function () {
 } );
 
 /**
+ * Redirect old page slugs to new ones.
+ */
+add_action( 'template_redirect', function () {
+	if ( is_404() && trim( $_SERVER['REQUEST_URI'], '/' ) === 'childrens-birthday-parties' ) {
+		wp_redirect( home_url( '/art-parties/' ), 301 );
+		exit;
+	}
+} );
+
+/**
  * WooCommerce customizations (carried over from legacy Function theme).
  */
 if ( class_exists( 'WooCommerce' ) ) {
