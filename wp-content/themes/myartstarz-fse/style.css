@@ -70,6 +70,10 @@ Text Domain: myartstarz-fse
 .wc-block-product-template > li {
 	display: flex;
 	flex-direction: column;
+	border: 1px solid #E0E0E0;
+	border-radius: 12px;
+	padding: 12px;
+	background: #fff;
 }
 
 .wc-block-product-template > li > * {

@@ -93,7 +93,7 @@
 				<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 				<div class="wp-block-buttons">
 					<!-- wp:button {"style":{"color":{"background":"#ffffff","text":"#7B1FA2"},"border":{"radius":"50px"},"typography":{"fontWeight":"600"}}} -->
-					<div class="wp-block-button" style="font-weight:600"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="/classes" style="border-radius:50px;color:#7B1FA2;background-color:#ffffff">Learn More</a></div>
+					<div class="wp-block-button" style="font-weight:600"><a class="wp-block-button__link has-text-color has-background wp-element-button" href="/art-parties" style="border-radius:50px;color:#7B1FA2;background-color:#ffffff">Learn More</a></div>
 					<!-- /wp:button -->
 				</div>
 				<!-- /wp:buttons -->
