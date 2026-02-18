@@ -117,6 +117,42 @@ Text Domain: myartstarz-fse
 	.wc-block-product-template {
 		grid-template-columns: repeat(2, 1fr) !important;
 	}
+
+	/* Center product images on mobile */
+	.wc-block-components-product-image {
+		text-align: center;
+	}
+
+	.wc-block-components-product-image img {
+		max-width: 100% !important;
+	}
+
+	/* Center product card content on mobile */
+	.wc-block-product-template .wp-block-post-title,
+	.wc-block-product-template .wc-block-components-product-name,
+	.wc-block-product-template .has-text-align-center.wp-block-post-title {
+		text-align: center !important;
+	}
+
+	.wc-block-product-template .wc-block-components-product-price,
+	.wc-block-product-template .wp-block-woocommerce-product-price {
+		text-align: center !important;
+	}
+
+	.wc-block-product-template .wp-block-woocommerce-product-button {
+		text-align: center;
+	}
+
+	/* Bigger buttons on mobile */
+	.wc-block-components-product-button__button {
+		font-size: 0.85rem !important;
+		padding: 0.55rem 1.2rem !important;
+	}
+
+	/* Search bar full-width on mobile */
+	.wp-block-search .wp-block-search__inside-wrapper {
+		width: 100% !important;
+	}
 }
 
 /* Search results list layout */
@@ -220,6 +256,51 @@ Text Domain: myartstarz-fse
 .mas-contact-form .wpcf7-form input[type="submit"]:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Header layout — center nav between logo and user icon */
+.mas-header-row .wp-block-site-logo {
+	flex: 1;
+}
+
+/* Push WooCommerce customer account icon to the far right */
+.mas-header-row .wp-block-woocommerce-customer-account {
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.mas-header-row .wp-block-woocommerce-customer-account a {
+	color: var(--wp--preset--color--contrast);
+	transition: color 0.2s ease;
+}
+
+.mas-header-row .wp-block-woocommerce-customer-account a:hover {
+	color: var(--wp--preset--color--accent-1);
+}
+
+/* Hide WooCommerce mini-cart from header (takes layout space even when invisible) */
+.mas-header-row .wp-block-woocommerce-mini-cart {
+	display: none !important;
+}
+
+/* Hide "My Account" text link in desktop nav (it shows in mobile hamburger) */
+@media (min-width: 769px) {
+	.wp-block-navigation-item:has(a[href*="my-account"]) {
+		display: none;
+	}
+}
+
+/* Hide customer account icon on mobile — "My Account" is in the hamburger instead */
+@media (max-width: 768px) {
+	.mas-header-row .wp-block-woocommerce-customer-account {
+		display: none !important;
+	}
+
+	.mas-header-row .wp-block-site-logo {
+		flex: initial;
+	}
 }
 
 /* Paint splatter accent for hero */
