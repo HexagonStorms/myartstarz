@@ -306,30 +306,34 @@ Text Domain: myartstarz-fse
    WooCommerce Checkout & Cart
    ============================================= */
 
-/* Constrain checkout width and center it */
-.woocommerce-checkout,
-.woocommerce-cart {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 2rem 2.5rem;
+/* Break checkout & cart pages out of the 900px constrained layout */
+.wp-block-post-content:has(form.woocommerce-checkout),
+.wp-block-post-content:has(.woocommerce-cart-form) {
+	max-width: none !important;
+	padding: 2rem clamp(1.5rem, 5vw, 4rem);
+}
+
+.wp-block-post-content:has(form.woocommerce-checkout) > *,
+.wp-block-post-content:has(.woocommerce-cart-form) > * {
+	max-width: none !important;
 }
 
 /* Two-column layout for billing/shipping */
-.woocommerce-checkout #customer_details {
+form.woocommerce-checkout #customer_details {
 	display: flex;
 	gap: 2rem;
 }
 
-.woocommerce-checkout #customer_details .col-1,
-.woocommerce-checkout #customer_details .col-2 {
+form.woocommerce-checkout #customer_details .col-1,
+form.woocommerce-checkout #customer_details .col-2 {
 	flex: 1;
 	width: 50%;
 	float: none;
 }
 
 /* Section headings */
-.woocommerce-checkout h3,
-.woocommerce-checkout #order_review_heading {
+form.woocommerce-checkout h3,
+formform.woocommerce-checkout #order_review_heading {
 	font-size: 1.25rem;
 	font-weight: 700;
 	margin: 0 0 1rem;
@@ -338,15 +342,15 @@ Text Domain: myartstarz-fse
 }
 
 /* Form row layout using flexbox */
-.woocommerce-checkout .woocommerce-billing-fields__field-wrapper,
-.woocommerce-checkout .woocommerce-shipping-fields__field-wrapper,
-.woocommerce-checkout .woocommerce-additional-fields__field-wrapper {
+form.woocommerce-checkout .woocommerce-billing-fields__field-wrapper,
+form.woocommerce-checkout .woocommerce-shipping-fields__field-wrapper,
+form.woocommerce-checkout .woocommerce-additional-fields__field-wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.75rem;
 }
 
-.woocommerce-checkout .form-row {
+form.woocommerce-checkout .form-row {
 	margin: 0;
 	padding: 0;
 	float: none;
@@ -355,17 +359,17 @@ Text Domain: myartstarz-fse
 	flex-direction: column;
 }
 
-.woocommerce-checkout .form-row-wide {
+form.woocommerce-checkout .form-row-wide {
 	width: 100%;
 }
 
-.woocommerce-checkout .form-row-first,
-.woocommerce-checkout .form-row-last {
+form.woocommerce-checkout .form-row-first,
+form.woocommerce-checkout .form-row-last {
 	width: calc(50% - 0.375rem);
 }
 
 /* Labels — fixed height so side-by-side inputs always align */
-.woocommerce-checkout .form-row label {
+form.woocommerce-checkout .form-row label {
 	display: block;
 	font-size: 0.85rem;
 	font-weight: 600;
@@ -375,21 +379,21 @@ Text Domain: myartstarz-fse
 }
 
 /* Input wrapper fills remaining space */
-.woocommerce-checkout .form-row .woocommerce-input-wrapper {
+form.woocommerce-checkout .form-row .woocommerce-input-wrapper {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 }
 
-.woocommerce-checkout .form-row label .required {
+form.woocommerce-checkout .form-row label .required {
 	color: #FF6F00;
 }
 
 /* Inputs, selects, textareas */
-.woocommerce-checkout .form-row input.input-text,
-.woocommerce-checkout .form-row textarea,
-.woocommerce-checkout .form-row select,
-.woocommerce-checkout .form-row .select2-container .select2-selection--single {
+form.woocommerce-checkout .form-row input.input-text,
+form.woocommerce-checkout .form-row textarea,
+form.woocommerce-checkout .form-row select,
+form.woocommerce-checkout .form-row .select2-container .select2-selection--single {
 	width: 100%;
 	padding: 0.7rem 0.9rem;
 	border: 1px solid #E0E0E0;
@@ -400,48 +404,48 @@ Text Domain: myartstarz-fse
 	box-sizing: border-box;
 }
 
-.woocommerce-checkout .form-row input.input-text:focus,
-.woocommerce-checkout .form-row textarea:focus,
-.woocommerce-checkout .form-row select:focus {
+form.woocommerce-checkout .form-row input.input-text:focus,
+form.woocommerce-checkout .form-row textarea:focus,
+form.woocommerce-checkout .form-row select:focus {
 	outline: none;
 	border-color: #00BCD4;
 	box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.15);
 }
 
 /* Select2 dropdown — match exact height of text inputs */
-.woocommerce-checkout .select2-container {
+form.woocommerce-checkout .select2-container {
 	width: 100% !important;
 }
 
-.woocommerce-checkout .select2-container .select2-selection--single {
+form.woocommerce-checkout .select2-container .select2-selection--single {
 	height: calc(0.95rem * 1.4 + 0.7rem * 2 + 2px); /* font-size * line-height + padding*2 + border*2 */
 	display: flex;
 	align-items: center;
 }
 
-.woocommerce-checkout .select2-container .select2-selection--single .select2-selection__rendered {
+form.woocommerce-checkout .select2-container .select2-selection--single .select2-selection__rendered {
 	padding: 0;
 	line-height: 1.4;
 }
 
-.woocommerce-checkout .select2-container .select2-selection--single .select2-selection__arrow {
+form.woocommerce-checkout .select2-container .select2-selection--single .select2-selection__arrow {
 	height: 100%;
 	top: 0;
 }
 
 /* Textarea (order notes) */
-.woocommerce-checkout .form-row textarea {
+form.woocommerce-checkout .form-row textarea {
 	min-height: 180px;
 	resize: vertical;
 }
 
 /* Order review section */
-.woocommerce-checkout #order_review {
+form.woocommerce-checkout #order_review {
 	margin-top: 2rem;
 }
 
 /* Order review table */
-.woocommerce-checkout .shop_table {
+form.woocommerce-checkout .shop_table {
 	width: 100%;
 	border-collapse: collapse;
 	border: 1px solid #E0E0E0;
@@ -450,15 +454,15 @@ Text Domain: myartstarz-fse
 	margin-bottom: 1.5rem;
 }
 
-.woocommerce-checkout .shop_table th,
-.woocommerce-checkout .shop_table td {
+form.woocommerce-checkout .shop_table th,
+form.woocommerce-checkout .shop_table td {
 	padding: 0.75rem 1rem;
 	text-align: left;
 	font-size: 0.9rem;
 	border-bottom: 1px solid #E0E0E0;
 }
 
-.woocommerce-checkout .shop_table thead th {
+form.woocommerce-checkout .shop_table thead th {
 	background: #f8f8f8;
 	font-weight: 700;
 	font-size: 0.85rem;
@@ -466,48 +470,48 @@ Text Domain: myartstarz-fse
 	letter-spacing: 0.03em;
 }
 
-.woocommerce-checkout .shop_table .order-total td,
-.woocommerce-checkout .shop_table .order-total th {
+form.woocommerce-checkout .shop_table .order-total td,
+form.woocommerce-checkout .shop_table .order-total th {
 	font-weight: 700;
 	font-size: 1rem;
 }
 
 /* Payment methods */
-.woocommerce-checkout #payment {
+form.woocommerce-checkout #payment {
 	background: #f8f8f8;
 	border-radius: 12px;
 	padding: 1.5rem;
 }
 
-.woocommerce-checkout #payment .wc_payment_methods {
+form.woocommerce-checkout #payment .wc_payment_methods {
 	list-style: none;
 	padding: 0;
 	margin: 0 0 1rem;
 }
 
-.woocommerce-checkout #payment .wc_payment_method {
+form.woocommerce-checkout #payment .wc_payment_method {
 	padding: 0.75rem 0;
 	border-bottom: 1px solid #E0E0E0;
 }
 
-.woocommerce-checkout #payment .wc_payment_method:last-child {
+form.woocommerce-checkout #payment .wc_payment_method:last-child {
 	border-bottom: none;
 }
 
-.woocommerce-checkout #payment .wc_payment_method label {
+form.woocommerce-checkout #payment .wc_payment_method label {
 	font-weight: 600;
 	cursor: pointer;
 }
 
-.woocommerce-checkout #payment .payment_box {
+form.woocommerce-checkout #payment .payment_box {
 	padding: 0.75rem 0 0 1.5rem;
 	font-size: 0.9rem;
 	color: #666;
 }
 
 /* Stripe card element */
-.woocommerce-checkout #payment .wc-stripe-elements-field,
-.woocommerce-checkout #payment .stripe-card-group {
+form.woocommerce-checkout #payment .wc-stripe-elements-field,
+form.woocommerce-checkout #payment .stripe-card-group {
 	background: #fff;
 	border: 1px solid #E0E0E0;
 	border-radius: 8px;
@@ -516,7 +520,7 @@ Text Domain: myartstarz-fse
 }
 
 /* Place order button */
-.woocommerce-checkout #place_order {
+form.woocommerce-checkout #place_order {
 	display: block;
 	width: 100%;
 	background: #FF6F00;
@@ -531,15 +535,15 @@ Text Domain: myartstarz-fse
 	margin-top: 1rem;
 }
 
-.woocommerce-checkout #place_order:hover {
+form.woocommerce-checkout #place_order:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* WooCommerce notices / errors */
-.woocommerce-checkout .woocommerce-error,
-.woocommerce-checkout .woocommerce-message,
-.woocommerce-checkout .woocommerce-info {
+form.woocommerce-checkout .woocommerce-error,
+form.woocommerce-checkout .woocommerce-message,
+form.woocommerce-checkout .woocommerce-info {
 	padding: 0.75rem 1rem;
 	border-radius: 8px;
 	margin-bottom: 1.5rem;
@@ -649,23 +653,28 @@ Text Domain: myartstarz-fse
 
 /* Mobile checkout */
 @media (max-width: 768px) {
-	.woocommerce-checkout,
-	.woocommerce-cart {
+	.wp-block-post-content:has(form.woocommerce-checkout),
+	.wp-block-post-content:has(.woocommerce-cart-form) {
 		padding: 1.5rem 1rem;
 	}
 
-	.woocommerce-checkout #customer_details {
+	.wp-block-post-content:has(form.woocommerce-checkout) > *,
+	.wp-block-post-content:has(.woocommerce-cart-form) > * {
+		max-width: none !important;
+	}
+
+	form.woocommerce-checkout #customer_details {
 		flex-direction: column;
 		gap: 1rem;
 	}
 
-	.woocommerce-checkout #customer_details .col-1,
-	.woocommerce-checkout #customer_details .col-2 {
+	form.woocommerce-checkout #customer_details .col-1,
+	form.woocommerce-checkout #customer_details .col-2 {
 		width: 100%;
 	}
 
-	.woocommerce-checkout .form-row-first,
-	.woocommerce-checkout .form-row-last {
+	form.woocommerce-checkout .form-row-first,
+	form.woocommerce-checkout .form-row-last {
 		width: 100%;
 	}
 
@@ -710,8 +719,8 @@ Text Domain: myartstarz-fse
 	}
 
 	/* Checkout table responsive */
-	.woocommerce-checkout .shop_table td,
-	.woocommerce-checkout .shop_table th {
+	form.woocommerce-checkout .shop_table td,
+	form.woocommerce-checkout .shop_table th {
 		padding: 0.5rem 0.75rem;
 		font-size: 0.85rem;
 	}
