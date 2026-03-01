@@ -11,21 +11,41 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50)">
 
-	<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|40"}}}} -->
-	<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--40)">
-		<!-- wp:button {"style":{"color":{"background":"#FF6F00"},"border":{"radius":"50px"},"typography":{"fontWeight":"700","fontSize":"1.125rem"},"spacing":{"padding":{"top":"1rem","bottom":"1rem","left":"2.5rem","right":"2.5rem"}}}} -->
-		<div class="wp-block-button" style="font-size:1.125rem;font-weight:700"><a class="wp-block-button__link has-background wp-element-button" href="/product-category/school-district/supply-fees-district/" style="border-radius:50px;background-color:#FF6F00;padding-top:1rem;padding-right:2.5rem;padding-bottom:1rem;padding-left:2.5rem">Pay Supply Fee</a></div>
-		<!-- /wp:button -->
-	</div>
-	<!-- /wp:buttons -->
+	<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
+	<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Supply Fees</h2>
+	<!-- /wp:heading -->
 
-	<!-- wp:search {"label":"Search Classes","showLabel":false,"placeholder":"Search for a class...","width":75,"widthUnit":"%","buttonText":"Search","buttonPosition":"button-inside","buttonUseIcon":true,"style":{"border":{"radius":"8px"}},"align":"center"} /-->
+	<!-- wp:woocommerce/product-collection {"queryId":99,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[192]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+	<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+		<!-- wp:woocommerce/product-template -->
+		<!-- wp:post-title {"textAlign":"left","level":3,"isLink":true,"fontSize":"small"} /-->
+		<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+		<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+		<!-- /wp:woocommerce/product-template -->
+
+		<!-- wp:query-no-results -->
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">No supply fees available at this time.</p>
+		<!-- /wp:paragraph -->
+		<!-- /wp:query-no-results -->
+	</div>
+	<!-- /wp:woocommerce/product-collection -->
+
+	<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"className":"is-style-wide"} -->
+	<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
+	<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Classes</h2>
+	<!-- /wp:heading -->
 
 	<!-- wp:columns {"align":"wide","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"},"blockGap":{"left":"var:preset|spacing|50"}}}} -->
 	<div class="wp-block-columns alignwide" style="margin-top:var(--wp--preset--spacing--50)">
 
 		<!-- wp:column {"width":"220px","className":"mas-sidebar-filters"} -->
 		<div class="wp-block-column mas-sidebar-filters" style="flex-basis:220px">
+
+			<!-- wp:search {"label":"Search Classes","showLabel":false,"placeholder":"Search...","width":100,"widthUnit":"%","buttonPosition":"no-button","style":{"border":{"radius":"8px"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} /-->
 
 			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
 			<h3 class="wp-block-heading" style="font-size:1rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Filter by District</h3>
@@ -42,7 +62,6 @@
 				<a href="/product-category/school-district/private-other/" style="padding:6px 10px;border-radius:6px;text-decoration:none;color:#2D2D2D;">Private / Other</a>
 				<hr style="margin:8px 0;border:none;border-top:1px solid #E0E0E0;">
 				<a href="/product-category/school-district/summer-camps/" style="padding:6px 10px;border-radius:6px;text-decoration:none;color:#2D2D2D;">Summer Camps</a>
-				<a href="/product-category/school-district/supply-fees-district/" style="padding:6px 10px;border-radius:6px;text-decoration:none;color:#2D2D2D;">Supply Fees</a>
 				<a href="/product-category/school-district/products-merchandise/" style="padding:6px 10px;border-radius:6px;text-decoration:none;color:#2D2D2D;">Products / Merch</a>
 			</nav>
 			<style>

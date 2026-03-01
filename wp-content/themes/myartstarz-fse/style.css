@@ -726,6 +726,112 @@ form.woocommerce-checkout .woocommerce-info {
 	}
 }
 
+/* Supply fee list — table-style rows */
+.mas-supply-fee-list .wc-block-product-template,
+.mas-supply-fee-list .wc-block-product-template.is-flex-container {
+	display: flex !important;
+	flex-direction: column !important;
+	grid-template-columns: none !important;
+	gap: 0 !important;
+	border: 1px solid #E0E0E0;
+	border-radius: 8px;
+}
+
+.mas-supply-fee-list .wc-block-product-template > li,
+.mas-supply-fee-list .wc-block-product-template.is-flex-container > li {
+	display: grid !important;
+	grid-template-columns: 1fr auto auto !important;
+	flex-direction: row !important;
+	align-items: center !important;
+	gap: 1rem !important;
+	padding: 0.75rem 1rem !important;
+	border: none !important;
+	border-bottom: 1px solid #E0E0E0 !important;
+	border-radius: 0 !important;
+	background: #fff;
+	width: auto !important;
+	max-width: none !important;
+}
+
+.mas-supply-fee-list .wc-block-product-template > li:first-child {
+	border-radius: 8px 8px 0 0 !important;
+}
+
+.mas-supply-fee-list .wc-block-product-template > li:last-child {
+	border-bottom: none !important;
+	border-radius: 0 0 8px 8px !important;
+}
+
+.mas-supply-fee-list .wc-block-product-template > li:nth-child(even) {
+	background: #f9f9f9;
+}
+
+.mas-supply-fee-list .wp-block-post-title,
+.mas-supply-fee-list .wc-block-components-product-name {
+	font-size: 0.9rem !important;
+	line-height: 1.4 !important;
+	margin: 0 !important;
+	-webkit-line-clamp: unset !important;
+	overflow: visible !important;
+	text-overflow: unset !important;
+	min-width: 0;
+}
+
+.mas-supply-fee-list .wc-block-components-product-price,
+.mas-supply-fee-list .wp-block-woocommerce-product-price {
+	font-size: 0.9rem !important;
+	font-weight: 600 !important;
+	white-space: nowrap !important;
+	margin: 0 !important;
+	text-align: right !important;
+}
+
+.mas-supply-fee-list .wp-block-woocommerce-product-button,
+.mas-supply-fee-list .wc-block-components-product-button {
+	margin: 0 !important;
+	width: auto !important;
+	max-width: none !important;
+	overflow: visible !important;
+}
+
+.mas-supply-fee-list .wc-block-components-product-button__button,
+.mas-supply-fee-list .wc-block-components-product-button a {
+	font-size: 0.75rem !important;
+	padding: 0.35rem 0.75rem !important;
+	white-space: nowrap !important;
+	overflow: visible !important;
+	text-overflow: unset !important;
+	max-width: none !important;
+	width: auto !important;
+	display: inline-block !important;
+}
+
+@media (max-width: 768px) {
+	.mas-supply-fee-list .wc-block-product-template > li,
+	.mas-supply-fee-list .wc-block-product-template.is-flex-container > li {
+		grid-template-columns: 1fr !important;
+		gap: 0.4rem !important;
+		padding: 0.75rem 1rem !important;
+	}
+
+	.mas-supply-fee-list .wp-block-post-title,
+	.mas-supply-fee-list .wc-block-components-product-name {
+		font-size: 0.85rem !important;
+	}
+
+	.mas-supply-fee-list .wc-block-components-product-price,
+	.mas-supply-fee-list .wp-block-woocommerce-product-price {
+		text-align: left !important;
+	}
+
+	.mas-supply-fee-list .wc-block-components-product-button__button,
+	.mas-supply-fee-list .wc-block-components-product-button a {
+		width: 100% !important;
+		text-align: center !important;
+		padding: 0.5rem 1rem !important;
+	}
+}
+
 /* Paint splatter accent for hero */
 .mas-hero::before {
 	content: "";
