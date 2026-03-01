@@ -837,21 +837,31 @@ form.woocommerce-checkout .woocommerce-info {
 	margin-bottom: var(--wp--preset--spacing--20);
 }
 
+/* Match search input and sorting dropdown sizes */
+.mas-sidebar-filters .wp-block-search__input,
 .woocommerce-ordering select {
 	width: 100%;
-	appearance: none;
-	-webkit-appearance: none;
-	background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D2D2D' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
 	border: 1px solid #E0E0E0;
 	border-radius: 8px;
-	padding: 0.5rem 2rem 0.5rem 0.75rem;
-	font-size: 0.875rem;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.8rem;
 	font-family: inherit;
 	color: #2D2D2D;
-	cursor: pointer;
+	line-height: 1.4;
+	box-sizing: border-box;
 	transition: border-color 0.2s ease;
 }
 
+.woocommerce-ordering select {
+	appearance: none;
+	-webkit-appearance: none;
+	background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%232D2D2D' stroke-width='1.5' fill='none'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+	padding-right: 2rem;
+	cursor: pointer;
+}
+
+.mas-sidebar-filters .wp-block-search__input:hover,
+.mas-sidebar-filters .wp-block-search__input:focus,
 .woocommerce-ordering select:hover,
 .woocommerce-ordering select:focus {
 	border-color: #00BCD4;
