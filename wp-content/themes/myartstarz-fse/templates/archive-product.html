@@ -47,8 +47,14 @@
 
 			<!-- wp:search {"label":"Search Classes","showLabel":false,"placeholder":"Search...","width":100,"widthUnit":"%","buttonPosition":"no-button","style":{"border":{"radius":"8px"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} /-->
 
-			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
-			<h3 class="wp-block-heading" style="font-size:1rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Filter by District</h3>
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--20)">Sort</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:woocommerce/catalog-sorting /-->
+
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1rem","fontWeight":"700"},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|30"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1rem;font-weight:700;margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--30)">Filter by District</h3>
 			<!-- /wp:heading -->
 
 			<!-- wp:html -->
@@ -78,12 +84,7 @@
 		<!-- wp:column {"width":""} -->
 		<div class="wp-block-column">
 
-			<!-- wp:group {"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->
-			<div class="wp-block-group" style="margin-bottom:var(--wp--preset--spacing--30)">
-				<!-- wp:woocommerce/product-results-count /-->
-				<!-- wp:woocommerce/catalog-sorting /-->
-			</div>
-			<!-- /wp:group -->
+			<!-- wp:woocommerce/product-results-count /-->
 
 			<!-- wp:woocommerce/product-collection {"queryId":0,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":true,"taxQuery":{},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":true},"tagName":"div","displayLayout":{"type":"flex","columns":4}} -->
 			<div class="wp-block-woocommerce-product-collection">
