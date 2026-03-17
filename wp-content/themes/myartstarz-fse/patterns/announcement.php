@@ -9,11 +9,11 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}},"border":{"bottom":{"color":"var:preset|color|accent-6","width":"1px"},"top":{"color":"var:preset|color|accent-6","width":"1px"}}},"backgroundColor":"accent-5","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-accent-5-background-color has-background" style="border-top-color:var(--wp--preset--color--accent-6);border-top-width:1px;border-bottom-color:var(--wp--preset--color--accent-6);border-bottom-width:1px;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
 	<!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontSize":"clamp(1.5rem, 3vw, 2rem)","fontWeight":"800","textTransform":"uppercase"}},"textColor":"accent-1"} -->
-	<h2 class="wp-block-heading has-text-align-center has-accent-1-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:800;text-transform:uppercase">Spring Classes Beginning in January</h2>
+	<h2 class="wp-block-heading has-text-align-center has-accent-1-color has-text-color" style="font-size:clamp(1.5rem, 3vw, 2rem);font-weight:800;text-transform:uppercase">Summer Camp Registration Now Open</h2>
 	<!-- /wp:heading -->
 
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"}},"textColor":"accent-2"} -->
-	<p class="has-text-align-center has-accent-2-color has-text-color" style="font-size:1.1rem;font-weight:600">Registration Opening Soon &mdash; Be Sure to Reserve Your Spot!</p>
+	<p class="has-text-align-center has-accent-2-color has-text-color" style="font-size:1.1rem;font-weight:600">Sign Up Now &mdash; Spots Fill Up Fast!</p>
 	<!-- /wp:paragraph -->
 
 	<!-- wp:paragraph {"align":"center","style":{"typography":{"fontSize":"0.95rem"},"spacing":{"margin":{"top":"var:preset|spacing|30"}}},"textColor":"contrast"} -->
