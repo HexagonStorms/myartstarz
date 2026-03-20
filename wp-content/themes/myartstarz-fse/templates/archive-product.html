@@ -11,53 +11,207 @@
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|70","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--70);padding-left:var(--wp--preset--spacing--50)">
 
-	<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
-	<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Supply Fees</h2>
-	<!-- /wp:heading -->
+	<!-- wp:group {"className":"mas-section--supply-fees","layout":{"type":"default"}} -->
+	<div class="wp-block-group mas-section--supply-fees">
+		<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
+		<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Supply Fees</h2>
+		<!-- /wp:heading -->
 
-	<!-- wp:woocommerce/product-collection {"queryId":99,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[192]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
-	<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
-		<!-- wp:woocommerce/product-template -->
-		<!-- wp:post-title {"textAlign":"left","level":3,"isLink":true,"fontSize":"small"} /-->
-		<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
-		<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
-		<!-- /wp:woocommerce/product-template -->
+		<!-- wp:woocommerce/product-collection {"queryId":99,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[192]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+		<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+			<!-- wp:woocommerce/product-template -->
+			<!-- wp:post-title {"textAlign":"left","level":3,"isLink":true,"fontSize":"small"} /-->
+			<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+			<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+			<!-- /wp:woocommerce/product-template -->
 
-		<!-- wp:query-no-results -->
-		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center">No supply fees available at this time.</p>
-		<!-- /wp:paragraph -->
-		<!-- /wp:query-no-results -->
+			<!-- wp:query-no-results -->
+			<!-- wp:paragraph {"align":"center","className":"mas-no-results"} -->
+			<p class="has-text-align-center mas-no-results">No supply fees available at this time.</p>
+			<!-- /wp:paragraph -->
+			<!-- /wp:query-no-results -->
+		</div>
+		<!-- /wp:woocommerce/product-collection -->
+
+		<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"className":"is-style-wide"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"/>
+		<!-- /wp:separator -->
 	</div>
-	<!-- /wp:woocommerce/product-collection -->
+	<!-- /wp:group -->
 
-	<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"className":"is-style-wide"} -->
-	<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"/>
-	<!-- /wp:separator -->
+	<!-- wp:group {"className":"mas-section--summer-camps","layout":{"type":"default"}} -->
+	<div class="wp-block-group mas-section--summer-camps">
+		<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
+		<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Summer Camps</h2>
+		<!-- /wp:heading -->
 
-	<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
-	<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Summer Camp</h2>
-	<!-- /wp:heading -->
+		<!-- wp:html -->
+		<nav class="mas-camp-tabs" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.5rem;">
+			<button class="mas-camp-tab active" data-target="all" style="padding:8px 16px;border-radius:50px;border:2px solid #00BCD4;background:#00BCD4;color:#fff;font-size:0.85rem;font-weight:600;cursor:pointer;">All Camps</button>
+			<button class="mas-camp-tab" data-target="camp-neisd" style="padding:8px 16px;border-radius:50px;border:2px solid #00BCD4;background:#fff;color:#00BCD4;font-size:0.85rem;font-weight:600;cursor:pointer;">NEISD</button>
+			<button class="mas-camp-tab" data-target="camp-comal" style="padding:8px 16px;border-radius:50px;border:2px solid #00BCD4;background:#fff;color:#00BCD4;font-size:0.85rem;font-weight:600;cursor:pointer;">Comal ISD</button>
+			<button class="mas-camp-tab" data-target="camp-nisd" style="padding:8px 16px;border-radius:50px;border:2px solid #00BCD4;background:#fff;color:#00BCD4;font-size:0.85rem;font-weight:600;cursor:pointer;">NISD</button>
+			<button class="mas-camp-tab" data-target="camp-schertz" style="padding:8px 16px;border-radius:50px;border:2px solid #00BCD4;background:#fff;color:#00BCD4;font-size:0.85rem;font-weight:600;cursor:pointer;">Schertz Parks & Rec</button>
+			<button class="mas-camp-tab" data-target="camp-private" style="padding:8px 16px;border-radius:50px;border:2px solid #00BCD4;background:#fff;color:#00BCD4;font-size:0.85rem;font-weight:600;cursor:pointer;">Private Schools</button>
+		</nav>
+		<style>
+			.mas-camp-tab:hover { background: #e0f7fa !important; }
+			.mas-camp-tab.active { background: #00BCD4 !important; color: #fff !important; }
+			.mas-camp-panel { display: none; }
+			.mas-camp-panel.active { display: block; }
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var tabs = document.querySelectorAll('.mas-camp-tab');
+				var panels = document.querySelectorAll('.mas-camp-panel');
+				tabs.forEach(function(tab) {
+					tab.addEventListener('click', function() {
+						tabs.forEach(function(t) { t.classList.remove('active'); });
+						tab.classList.add('active');
+						var target = tab.getAttribute('data-target');
+						panels.forEach(function(p) {
+							if (target === 'all' || p.getAttribute('data-camp') === target) {
+								p.classList.add('active');
+							} else {
+								p.classList.remove('active');
+							}
+						});
+					});
+				});
+			});
+		</script>
+		<!-- /wp:html -->
 
-	<!-- wp:woocommerce/product-collection {"queryId":206,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[206]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
-	<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
-		<!-- wp:woocommerce/product-template -->
-		<!-- wp:post-title {"textAlign":"left","level":3,"isLink":true,"fontSize":"small"} /-->
-		<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
-		<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
-		<!-- /wp:woocommerce/product-template -->
+		<!-- NEISD -->
+		<!-- wp:group {"className":"mas-camp-panel active","layout":{"type":"default"}} -->
+		<div class="wp-block-group mas-camp-panel active" data-camp="camp-neisd">
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"},"spacing":{"margin":{"bottom":"var:preset|spacing|20"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1.1rem;font-weight:600;margin-bottom:var(--wp--preset--spacing--20)">NEISD</h3>
+			<!-- /wp:heading -->
 
-		<!-- wp:query-no-results -->
-		<!-- wp:paragraph {"align":"center"} -->
-		<p class="has-text-align-center">No summer camps available at this time.</p>
-		<!-- /wp:paragraph -->
-		<!-- /wp:query-no-results -->
+			<!-- wp:woocommerce/product-collection {"queryId":207,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[207]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+			<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+				<!-- wp:woocommerce/product-template -->
+				<!-- wp:post-title {"textAlign":"left","level":4,"isLink":true,"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+				<!-- /wp:woocommerce/product-template -->
+
+				<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">No NEISD camps listed yet.</p>
+				<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:woocommerce/product-collection -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Comal ISD -->
+		<!-- wp:group {"className":"mas-camp-panel active","layout":{"type":"default"}} -->
+		<div class="wp-block-group mas-camp-panel active" data-camp="camp-comal">
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|20"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1.1rem;font-weight:600;margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--20)">Comal ISD</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:woocommerce/product-collection {"queryId":208,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[208]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+			<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+				<!-- wp:woocommerce/product-template -->
+				<!-- wp:post-title {"textAlign":"left","level":4,"isLink":true,"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+				<!-- /wp:woocommerce/product-template -->
+
+				<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">No Comal ISD camps listed yet.</p>
+				<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:woocommerce/product-collection -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- NISD -->
+		<!-- wp:group {"className":"mas-camp-panel active","layout":{"type":"default"}} -->
+		<div class="wp-block-group mas-camp-panel active" data-camp="camp-nisd">
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|20"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1.1rem;font-weight:600;margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--20)">NISD</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:woocommerce/product-collection {"queryId":209,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[209]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+			<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+				<!-- wp:woocommerce/product-template -->
+				<!-- wp:post-title {"textAlign":"left","level":4,"isLink":true,"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+				<!-- /wp:woocommerce/product-template -->
+
+				<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">No NISD camps listed yet.</p>
+				<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:woocommerce/product-collection -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Schertz Parks & Rec -->
+		<!-- wp:group {"className":"mas-camp-panel active","layout":{"type":"default"}} -->
+		<div class="wp-block-group mas-camp-panel active" data-camp="camp-schertz">
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|20"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1.1rem;font-weight:600;margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--20)">Schertz Parks & Rec</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:woocommerce/product-collection {"queryId":210,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[210]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+			<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+				<!-- wp:woocommerce/product-template -->
+				<!-- wp:post-title {"textAlign":"left","level":4,"isLink":true,"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+				<!-- /wp:woocommerce/product-template -->
+
+				<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">No Schertz Parks & Rec camps listed yet.</p>
+				<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:woocommerce/product-collection -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- Private Schools -->
+		<!-- wp:group {"className":"mas-camp-panel active","layout":{"type":"default"}} -->
+		<div class="wp-block-group mas-camp-panel active" data-camp="camp-private">
+			<!-- wp:heading {"level":3,"style":{"typography":{"fontSize":"1.1rem","fontWeight":"600"},"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|20"}}}} -->
+			<h3 class="wp-block-heading" style="font-size:1.1rem;font-weight:600;margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--20)">Private Schools</h3>
+			<!-- /wp:heading -->
+
+			<!-- wp:woocommerce/product-collection {"queryId":211,"query":{"perPage":20,"pages":0,"offset":0,"postType":"product","order":"asc","orderBy":"title","search":"","exclude":[],"inherit":false,"taxQuery":{"product_cat":[211]},"isProductCollectionBlock":true,"woocommerceHandPickedProducts":[],"filterable":false},"tagName":"div","displayLayout":{"type":"flex","columns":1},"className":"mas-supply-fee-list"} -->
+			<div class="wp-block-woocommerce-product-collection mas-supply-fee-list">
+				<!-- wp:woocommerce/product-template -->
+				<!-- wp:post-title {"textAlign":"left","level":4,"isLink":true,"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-price {"fontSize":"small"} /-->
+				<!-- wp:woocommerce/product-button {"fontSize":"small"} /-->
+				<!-- /wp:woocommerce/product-template -->
+
+				<!-- wp:query-no-results -->
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">No Private Schools camps listed yet.</p>
+				<!-- /wp:paragraph -->
+				<!-- /wp:query-no-results -->
+			</div>
+			<!-- /wp:woocommerce/product-collection -->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"className":"is-style-wide"} -->
+		<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"/>
+		<!-- /wp:separator -->
 	</div>
-	<!-- /wp:woocommerce/product-collection -->
-
-	<!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"className":"is-style-wide"} -->
-	<hr class="wp-block-separator has-alpha-channel-opacity is-style-wide" style="margin-top:var(--wp--preset--spacing--50);margin-bottom:var(--wp--preset--spacing--50)"/>
-	<!-- /wp:separator -->
+	<!-- /wp:group -->
 
 	<!-- wp:heading {"style":{"typography":{"fontSize":"1.5rem","fontWeight":"700"},"spacing":{"margin":{"bottom":"var:preset|spacing|30"}}}} -->
 	<h2 class="wp-block-heading" style="font-size:1.5rem;font-weight:700;margin-bottom:var(--wp--preset--spacing--30)">Classes</h2>

@@ -867,6 +867,18 @@ form.woocommerce-checkout .woocommerce-info {
 	outline: none;
 }
 
+/* Hide supply-fee / summer-camp sections when they have no products */
+.mas-section--supply-fees:has(.mas-no-results),
+.mas-section--summer-camps:has(.mas-no-results) {
+	display: none;
+}
+
+/* Hide prices on the classes/shop archive page */
+.archive.post-type-archive-product .wc-block-components-product-price,
+.archive.post-type-archive-product .wp-block-woocommerce-product-price {
+	display: none !important;
+}
+
 /* Paint splatter accent for hero */
 .mas-hero::before {
 	content: "";
