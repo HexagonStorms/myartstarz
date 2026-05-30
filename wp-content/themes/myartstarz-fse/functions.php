@@ -89,13 +89,25 @@ if ( class_exists( 'WooCommerce' ) ) {
 		return $is_checkout;
 	}, 20 );
 
-	// Change default "Add to cart" button text to "Register Now", but preserve custom button text.
-	add_filter( 'woocommerce_product_single_add_to_cart_text', function ( $text ) {
-		return ( strtolower( $text ) === 'add to cart' ) ? __( 'Register Now', 'myartstarz-fse' ) : $text;
+	// Change default "Add to cart" button text, but preserve custom button text.
+	// Supply fees read "Pay Now"; everything else (classes, camps) reads "Register Now".
+	$mas_supply_fee_cats = array( 'supply-fees-district', 'supply-fees' );
+	$mas_cart_button_text = function ( $text, $product ) use ( $mas_supply_fee_cats ) {
+		if ( strtolower( $text ) !== 'add to cart' ) {
+			return $text;
+		}
+		if ( $product instanceof WC_Product && has_term( $mas_supply_fee_cats, 'product_cat', $product->get_id() ) ) {
+			return __( 'Pay Now', 'myartstarz-fse' );
+		}
+		return __( 'Register Now', 'myartstarz-fse' );
+	};
+	add_filter( 'woocommerce_product_single_add_to_cart_text', function ( $text ) use ( $mas_cart_button_text ) {
+		global $product;
+		return $mas_cart_button_text( $text, $product );
 	} );
-	add_filter( 'woocommerce_product_add_to_cart_text', function ( $text ) {
-		return ( strtolower( $text ) === 'add to cart' ) ? __( 'Register Now', 'myartstarz-fse' ) : $text;
-	} );
+	add_filter( 'woocommerce_product_add_to_cart_text', function ( $text, $product = null ) use ( $mas_cart_button_text ) {
+		return $mas_cart_button_text( $text, $product );
+	}, 10, 2 );
 
 	// Exclude supply fees from the main classes grid (they have their own section).
 	add_action( 'pre_get_posts', function ( $query ) {
