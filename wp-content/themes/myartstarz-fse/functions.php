@@ -26,6 +26,13 @@ add_action( 'wp_enqueue_scripts', function () {
 		wp_get_theme()->get( 'Version' ),
 		true
 	);
+	wp_enqueue_script(
+		'myartstarz-class-title-format',
+		get_stylesheet_directory_uri() . '/assets/js/class-title-format.js',
+		array(),
+		wp_get_theme()->get( 'Version' ),
+		true
+	);
 } );
 
 /**
