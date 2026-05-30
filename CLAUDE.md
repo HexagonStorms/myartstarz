@@ -8,24 +8,29 @@
 
 Phased modernization and migration of myartstarz.com from legacy WordPress to a modern Full Site Editing (FSE) environment. The existing site must be **cloned first** - we are NOT building from scratch.
 
-## Staging Server
+## Production Server
 
-The site is live on a Hetzner VPS managed by the `plaza-codes-vps` project (`~/Code/plaza-codes-vps/`).
+The live site is **https://myartstarz.com**, hosted on the Hetzner VPS managed by the `plaza-codes-vps` project (`~/Code/plaza-codes-vps/`). The migration is complete — the FSE theme is active and myartstarz.com is served directly from this box. The old Cloudways host (see `deploy.sh`) is legacy and no longer the deploy target.
 
-- **Staging URL:** https://myartstarz.plaza.codes
-- **Server IP:** 5.78.148.196
+- **Live URL:** https://myartstarz.com (WordPress `siteurl`/`home` are both this)
+- **Server IP:** 5.78.148.196 — **DNS:** myartstarz.com → 5.78.148.196
 - **SSH:** `ssh hetzner` (root@5.78.148.196, key: ~/.ssh/hetzner_rsa)
-- **Web root:** `/var/www/myartstarz.plaza.codes/public/`
+- **Web root:** `/var/www/myartstarz.plaza.codes/public/` (directory name is historical; this IS production — do not delete it)
 - **Site user:** `myartstarz_plaza_codes`
 - **Database:** `myartstarz_plaza_codes_db` (MariaDB, table prefix: `mas_`)
 - **PHP:** 8.3-FPM
-- **Current theme:** Function (WooThemes classic theme — being replaced with FSE)
-- **WP-CLI:** Available as `sudo -u myartstarz_plaza_codes wp --path=/var/www/myartstarz.plaza.codes/public`
-- **WordPress admin:** https://myartstarz.plaza.codes/wp-admin/
+- **Active theme:** `myartstarz-fse` (custom FSE theme — this is what we develop)
+- **WP-CLI:** `sudo -u myartstarz_plaza_codes wp --path=/var/www/myartstarz.plaza.codes/public`
+- **WordPress admin:** https://myartstarz.com/wp-admin/
+
+### Decommissioned: myartstarz.plaza.codes
+
+`myartstarz.plaza.codes` was a temporary staging alias. It pointed at the *same* docroot and database as production, so it was never a separate environment. It is being torn down — **do not use it.** Tearing it down means removing only its Nginx server block and SSL cert (and the DNS record); the docroot and database stay, because they are production.
 
 ## Deployment Workflow
 
-### Deploy theme changes to staging
+Changes go straight to production (there is no separate staging environment). Sync the theme, fix ownership, verify.
+
 ```bash
 # Deploy the FSE theme
 rsync -avz --delete ~/Code/myartstarz/wp-content/themes/myartstarz-fse/ \
@@ -35,10 +40,10 @@ rsync -avz --delete ~/Code/myartstarz/wp-content/themes/myartstarz-fse/ \
 ssh hetzner "chown -R myartstarz_plaza_codes:myartstarz_plaza_codes /var/www/myartstarz.plaza.codes/public/wp-content/themes/"
 
 # Verify
-ssh hetzner "curl -sI https://myartstarz.plaza.codes/ | head -3"
+ssh hetzner "curl -sI https://myartstarz.com/ | head -3"
 ```
 
-Or use the `/deploy` command which does all of the above.
+Or use the `/deploy` command which does all of the above. **Pull server changes back into the repo first** (next section) — the live theme has been edited out-of-band before, and `--delete` will clobber anything not in git.
 
 ### Pull latest from server (if changes were made via wp-admin)
 ```bash
@@ -135,11 +140,9 @@ myartstarz/
 ## Important Notes
 - **DO NOT** break existing payment/registration functionality
 - **DO NOT** lose any user data or order history
-- **ALWAYS** deploy to staging (myartstarz.plaza.codes) and verify before going to production
-- Keep original Cloudways site live during entire development process
+- Deploys go straight to production (myartstarz.com). There is no separate staging — verify on the live site after each deploy, ideally off-hours.
+- The live theme has been edited out-of-band (directly on the server) before. **Always pull the server theme into the repo before deploying** so `rsync --delete` doesn't clobber untracked changes.
 - Lisa must be able to update class dates without developer help
-- The Function theme is old (2011, WooThemes) and throws PHP 8.3 deprecation warnings — this is expected and harmless
-- reCAPTCHA will show "invalid domain" on staging — this is expected and resolves when moved to myartstarz.com
 
 ## Contact
 - **Client:** Shelley Fluke (info@myartstarz.com)
