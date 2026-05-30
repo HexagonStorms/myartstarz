@@ -25,7 +25,7 @@ The live site is **https://myartstarz.com**, hosted on the Hetzner VPS managed b
 
 ### Decommissioned: myartstarz.plaza.codes
 
-`myartstarz.plaza.codes` was a temporary staging alias. It pointed at the *same* docroot and database as production, so it was never a separate environment. It is being torn down — **do not use it.** Tearing it down means removing only its Nginx server block and SSL cert (and the DNS record); the docroot and database stay, because they are production.
+`myartstarz.plaza.codes` was a temporary staging alias. It pointed at the *same* docroot and database as production, so it was never a separate environment. **Torn down 2026-05-30** — its Nginx server block and SSL cert were removed (nginx conf backed up to `/root/teardown-backup-myartstarz-plaza-codes/` on the box); the docroot and database were left intact because they are production. A stale DNS record may still exist in Cloudflare. Do not recreate the alias.
 
 ## Deployment Workflow
 
